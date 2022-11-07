@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phone Book</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <h1 id="title">Телефонная книга</h1>
+            
+            <form id="headFrm">    
+                <div id="ss">                          
+                    <p class="pp">Сортировать по:</p>
+                    <input type="radio" id="searchBy1" name="name1">
+                    <label for="searchBy1">        Имя     </label>
+                    <input type="radio" id="searchBy2" name="name1">              
+                    <label for="searchBy2">         Телефон      </label>
+                </div>
+                <input type="text" name="search" id="searchContact" placeholder="Поиск..."required autocomplete="off"></br></br>
+            </form>
+        </header>
+
+        <main>
+            <h2>Добавить контакт</h2>
+            <form id="frm" name="info" >
+                </br>
+                <input  type="text" name="contactName" class="addContact" id="name" placeholder="Имя" ></br></br>
+                <input  type="tel" name="contactNo"  class="addContact" id="phone" placeholder="Телефон" ></br></br>
+                <input type="submit" value="Создать" id="addCont" name="go">
+            </form>
+        </br>
+            <table id='contacts'>
+                <thead>
+                    <tr>
+                        <th>Имя</th>
+                        <th>Телефон</th>
+                        <th>Удалить</th>
+                    </tr>
+                </thead>
+                <tbody id="tbdy">
+                    <tr id="contInfo" >
+                        
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </main>
+    </div>
+    <div id="popup">
+        <p>Ваш номер телефона кажется недействительным</p>
+        <p>Убедитесь, что вы используете этот формат "7хххххххххх"</p>
+        <button type="button" id="ok">Ok</button>
+    </div>
+    <div id="confirm">
+            <p>Вы уверены, что хотите удалить этот контакт?</p>
+            <button type="button" id="yesbtn">Да</button>
+            <button type="button" id="nobtn">Нет</button>
+    </div>
+    <div id="existsup">
+        <p>Введенный вами номер телефона уже существует</p>
+        <button type="button" id="eok">Ok</button>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
